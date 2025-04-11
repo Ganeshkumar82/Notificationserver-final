@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting...</title>
+    <style>
+        /* Reset margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+            overflow: hidden; /* Hide scroll bars */
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: darkgreen;
+            background-color: #F0F0F0;
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 66px;
+            border-radius: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <p id="tcpStatus">TCP SOCKET IS STARTING...</p>
+        <p id="wsStatus">Web SOCKET IS STARTING...</p>
+        <!-- You can add loading spinners or other visual cues here -->
+    </div>
+</body>
+</html>

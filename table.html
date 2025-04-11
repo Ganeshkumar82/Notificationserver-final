@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Example</title>
+<style>
+  body {
+    background-color: rgb(33, 33, 48); /* Set background color of the page to green */
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%; /* Set table width to 100% */
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center; /* Center align text within table cells */
+    position: relative; /* Set position to relative for containing the absolutely positioned button */
+    color: white; /* Change font color to yellow */
+  }
+  th {
+    background-color: rgb(23, 22, 34); /* Set background color of the heading row to orange */
+  }
+  .container {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the end of the container */
+  }
+  button.send-button {
+    color: black;
+    background-color: white;
+    width: 100%; /* Set button width to 100% of the table cell */
+    height: 100%; /* Set button height to 100% of the table cell */
+    position: absolute; /* Position button absolutely within the table cell */
+    top: 0; /* Align button to the top of the table cell */
+    left: 0; /* Align button to the left of the table cell */
+    border: none;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <button id="closeButton" style="color: red; background-color: transparent; border: none;size: 30px;">X</button> <!-- Container to wrap both the table and the button -->
+    <br>
+    <table>
+      <tr>
+        <th style="width: 120px;">User Id</th>
+        <th style="width: 200px;">User Name</th>
+        <th>Status</th>
+        <th style="width: 150px;">Last Event</th>
+        <th>Terminate</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>User 1</td>
+        <td>Connected</td>
+        <td>Event 1</td>
+        <td><button class="send-button">Close</button></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>User 2</td>
+        <td>Connected</td>
+        <td>Event 2</td>
+        <td><button class="send-button">Close</button></td>
+      </tr>
+    </table>
+    <!-- Close button placed after the table -->
+</div>
+
+<script>
+  // Get the reference to the OK button
+  const closeButton = document.getElementById('closeButton');
+
+  // Add click event listener to the OK button
+  closeButton.addEventListener('click', () => {
+    // Close the current window when OK button is clicked
+    window.close();
+  });
+</script>
+
+</body>
+</html>

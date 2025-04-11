@@ -1,0 +1,2 @@
+first run -> npm run builder
+then -> npm run packager

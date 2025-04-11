@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Server</title>
+    <!-- Add Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-BaKT6QgpxSBxpG8ipKTus+N0TkIInjOIG/UqqKxMz2xVz3z2pB+iF2s2ucJf8ToU" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: rgb(243,243,236); /* Set the background color of the body */
+            display: flex;
+            /* Position elements in a row with space between */
+            align-items: center; /* Vertically center items */
+            padding: 1px; /* Add padding for better spacing */
+            margin: 0; /* Remove default margin */
+        }
+        .content {
+            justify-content: start;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: Arial, sans-serif;
+        }
+        .logo1 {
+            margin-left: 110px; /* Adjust margin */
+        }   
+        .headings {
+            padding-left: 70px;
+            font-family: Arial, sans-serif;
+            font-size: 55px;
+            color: rgba(32,6,111,255);
+            font-weight: 500;
+            margin: 0; /* Remove default margin */
+        }
+        .version {
+            padding-left: 385px;
+            margin-left: calc((115%-200px)/2);
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            color: rgba(32,6,111,255);
+            margin-top: -5px; /* Adjusted to remove space */
+        }
+        .centerview {
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+            color: rgba(32,6,111,255);
+            margin-top: 30px;
+            padding-left: 80px;
+        }
+        .centerview p {
+            margin: 15px 0; /* Adjust the top and bottom margins */
+        }
+        .rightside {
+            margin-top: 5px;
+            margin-left: 70px;
+            align-items: flex-start;
+            width: 100px; /* Set width */
+            height: 100%; /* Take full height */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="logo1"> 
+            <img src="full_logo.png" alt="Logo">
+        </div>
+        <div class="headings"> 
+            Notification Server
+        </div>
+        <div class="version">version 2.0</div>
+        <div class="centerview">
+            <p>Web&nbsp;Socket&nbsp;Status&nbsp;&nbsp;:&nbsp;&nbsp;Connected</p>
+            <p>TCP&nbsp;Socket&nbsp;Status&nbsp;&nbsp;:&nbsp;&nbsp;Connected</p>
+        </div>
+    </div>
+    <div class="rightside">
+        <img src="notification1-.png " style="width: 600px;height: 505.5px;">
+    </div>
+</body>
+</html>
