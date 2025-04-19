@@ -1,6 +1,6 @@
 const { ipcRenderer } = require('electron');
 const db = require('./db');
-const config = require('../config');
+const config = require('../config1');
 
 async function authenticateUser(userId, custId) {
     try {

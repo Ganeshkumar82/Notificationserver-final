@@ -1,6 +1,6 @@
 const Redis = require('ioredis');
 const mysql = require('mysql2/promise');
-const config = require('../config');
+const config = require('../config1');
 const pool = mysql.createPool(config.db);
 const pool1 = mysql.createPool(config.db1);
 const preparedStatements = new Map();

@@ -6,7 +6,7 @@ const path = require('path');
 const net = require('net');
 const WebSocket = require('ws');
 const userauth = require('./services/userauth');
-const config = require('./config');
+const config = require('./config1');
 const db = require('./services/db');
 const express = require('express');
 const os = require('os');
@@ -496,6 +496,39 @@ async function startNotificationServer() {
                     
                     
        }  }
+       if(message.startsWith('<breakfinishedrequest>')){
+        const match = message.match(/<breakfinishedrequest>(.*),(.*),(.*)<\/breakfinishedrequest>/);
+        const match1 = message.match(/<breakfinishedrequest>(.*),(.*)<\/breakfinishedrequest>/);
+        if(match){
+            const RequestUserId = match[1].trim();
+            const breakUserId = match[2].trim();
+            const group = match[3].trim() || 0;
+            const user = connectedUsers.get(RequestUserId);
+            const user1 = connectedUsers.get(breakUserId);
+            if (user && user.socket && user1.username) {
+                if (user.socket instanceof WebSocket && user.socket.readyState === WebSocket.OPEN) {
+                    user.socket.send(`<breakfinished>${breakUserId},${user1.username},${group}</breakfinished>`);
+                   
+                } else if (user.socket instanceof net.Socket && !user.socket.destroyed) {
+                    user.socket.write(`<breakfinished>${breakUserId},${user1.username},${group}</breakfinished>`);
+            }
+         }
+        }
+        if(match1){
+            const RequestUserId = match1[1].trim();
+            const breakUserId = match1[2].trim();
+            const user = connectedUsers.get(RequestUserId);
+            const user1 = connectedUsers.get(breakUserId);
+            if (user && user.socket && user1.username) {
+                if (user.socket instanceof WebSocket && user.socket.readyState === WebSocket.OPEN) {
+                    user.socket.send(`<breakfinished>${breakUserId},${user1.username}</breakfinished>`);
+                   
+                } else if (user.socket instanceof net.Socket && !user.socket.destroyed) {
+                    user.socket.write(`<breakfinished>${breakUserId},${user1.username}</breakfinished>`);
+            }
+         }
+        }
+       }
             if(message.startsWith(`<response>`)){
                 const match = message.match(/<response>(\d+),(\d+),(.+),(.+),(.+)<\/response>/);
                 if (match) {
@@ -731,7 +764,7 @@ async function distributeJpgFiles(ws) {
 
         // Break the loop if no more images are available
         if (imagePaths.length === 0) {
-            console.log("No more images to process.");
+            // console.log("No more images to process.");
             break;
         }
 
