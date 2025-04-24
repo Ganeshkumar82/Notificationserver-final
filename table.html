@@ -1,85 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Table Example</title>
-<style>
-  body {
-    background-color: rgb(33, 33, 48); /* Set background color of the page to green */
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%; /* Set table width to 100% */
-  }
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center; /* Center align text within table cells */
-    position: relative; /* Set position to relative for containing the absolutely positioned button */
-    color: white; /* Change font color to yellow */
-  }
-  th {
-    background-color: rgb(23, 22, 34); /* Set background color of the heading row to orange */
-  }
-  .container {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Align items to the end of the container */
-  }
-  button.send-button {
-    color: black;
-    background-color: white;
-    width: 100%; /* Set button width to 100% of the table cell */
-    height: 100%; /* Set button height to 100% of the table cell */
-    position: absolute; /* Position button absolutely within the table cell */
-    top: 0; /* Align button to the top of the table cell */
-    left: 0; /* Align button to the left of the table cell */
-    border: none;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connected Users</title>
+  <style>
+    body {
+      background-color: rgb(33, 33, 48);
+      color: white;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    button.icon-button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: invert(1);
+      transition: filter 0.2s ease;
+    }
+    button.icon-button:hover {
+      filter: invert(0.8) brightness(1.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      user-select: none;
+    }
+    th {
+      background-color: rgb(23, 22, 34);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      transition: background-color 0.3s ease;
+    }
+    button.close-button {
+  background-color: rgb(252, 27, 27); /* vibrant red */
+  color: rgb(255, 255, 255); /* white text for contrast */
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+button.close-button:hover {
+  background-color: rgb(222, 10, 10); /* deeper red on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+  </style>
 </head>
 <body>
-<div class="container">
-    <button id="closeButton" style="color: red; background-color: transparent; border: none;size: 30px;">X</button> <!-- Container to wrap both the table and the button -->
-    <br>
-    <table>
-      <tr>
-        <th style="width: 120px;">User Id</th>
-        <th style="width: 200px;">User Name</th>
-        <th>Status</th>
-        <th style="width: 150px;">Last Event</th>
-        <th>Terminate</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>User 1</td>
-        <td>Connected</td>
-        <td>Event 1</td>
-        <td><button class="send-button">Close</button></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>User 2</td>
-        <td>Connected</td>
-        <td>Event 2</td>
-        <td><button class="send-button">Close</button></td>
-      </tr>
+  <div class="container">
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <button id="refreshButton" class="icon-button" title="Refresh">
+        <!-- Refresh SVG icon -->
+         
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+          <path d="M8 1v4l3-3-3-3v4z"/>
+        </svg>
+      </button>
+    </div>
+  
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>User Id</th>
+          <th>User Name</th>
+          <th>Status</th>
+          <th>Total Events</th>
+          <th>Terminate</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody">
+        <!-- Rows filled dynamically -->
+      </tbody>
     </table>
-    <!-- Close button placed after the table -->
-</div>
+  </div>
+  
 
-<script>
-  // Get the reference to the OK button
-  const closeButton = document.getElementById('closeButton');
+  <script>
+    const tableBody = document.getElementById('userTableBody');
+    const refreshButton = document.getElementById('refreshButton');
 
-  // Add click event listener to the OK button
-  closeButton.addEventListener('click', () => {
-    // Close the current window when OK button is clicked
-    window.close();
-  });
-</script>
+    async function fetchData() {
+      try {
+        const [connectedRes, eventsRes] = await Promise.all([
+          fetch('http://localhost:55554/connectedusers'),
+          fetch('http://localhost:55554/userevents')
+        ]);
 
+        const connectedUsers = await connectedRes.json();
+        const userEvents = await eventsRes.json();
+
+        tableBody.innerHTML = '';
+
+        for (const [userId, username] of Object.entries(connectedUsers.connectedUsers)) {
+          const totalEvents = userEvents[userId] || 0;
+
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${userId}</td>
+            <td>${username}</td>
+            <td>Connected</td>
+            <td>${totalEvents}</td>
+            <td><button class="close-button" data-userid="${userId}">Close</button></td>
+          `;
+          tableBody.appendChild(tr);
+        }
+
+        document.querySelectorAll('.close-button').forEach(button => {
+          button.addEventListener('click', () => {
+            const userId = button.dataset.userid;
+            terminateUser(userId, button);
+          });
+        });
+
+      } catch (error) {
+        console.error('Error loading users:', error);
+      }
+    }
+
+    function terminateUser(userId, button) {
+      fetch(`http://localhost:55554/disconnect/${userId}`, {
+        method: 'POST'
+      })
+      .then(res => res.json())
+      .then(result => {
+        if (result.success) {
+          const row = button.closest('tr');
+          row.remove();
+        } else {
+          alert('Failed to disconnect: ' + result.message);
+        }
+      })
+      .catch(err => {
+        console.error('Terminate error:', err);
+      });
+    }
+
+    refreshButton.addEventListener('click', fetchData);
+
+    // Initial fetch on load
+    fetchData();
+  </script>
 </body>
 </html>

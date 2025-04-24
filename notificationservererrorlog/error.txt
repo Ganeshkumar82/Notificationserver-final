@@ -1,1 +1,158 @@
 
+2025-04-19T08:19:01.606Z [INFO]: Client connected
+2025-04-19T08:19:04.747Z [INFO]: Client disconnected120
+2025-04-19T08:19:49.419Z [INFO]: Client disconnected6
+2025-04-19T08:20:09.770Z [INFO]: Client connected
+2025-04-19T08:20:54.534Z [INFO]: Client connected
+2025-04-19T08:21:04.247Z [INFO]: Client disconnected120
+2025-04-19T08:37:01.250Z [INFO]: Client connected
+2025-04-19T09:33:04.107Z [INFO]: Client connected
+2025-04-19T09:37:23.402Z [INFO]: Client disconnected120
+2025-04-19T09:38:50.910Z [INFO]: Client disconnected6
+2025-04-19T09:39:14.398Z [INFO]: Client connected
+2025-04-19T09:42:36.269Z [INFO]: Client disconnected120
+2025-04-19T09:57:35.519Z [INFO]: Client connected
+2025-04-19T09:57:39.671Z [INFO]: Client disconnected120
+2025-04-19T10:02:09.106Z [INFO]: Client connected
+2025-04-19T10:02:16.472Z [INFO]: Client disconnected120
+2025-04-19T10:02:35.867Z [INFO]: Client connected
+2025-04-19T10:03:53.917Z [INFO]: Client disconnected120
+2025-04-19T10:04:01.642Z [INFO]: Client connected
+2025-04-19T10:11:38.540Z [INFO]: Client disconnected64
+2025-04-19T10:18:23.136Z [INFO]: Client disconnected120
+2025-04-19T10:19:05.203Z [INFO]: Client connected
+2025-04-19T10:19:41.271Z [INFO]: Client disconnected120
+2025-04-19T10:20:22.991Z [INFO]: Client connected
+2025-04-19T10:29:46.186Z [INFO]: Client connected
+2025-04-19T10:32:40.111Z [INFO]: Client disconnected120
+2025-04-19T12:46:48.127Z [INFO]: Client disconnected64
+2025-04-24T06:57:13.845Z [INFO]: Express server running on port 55554
+2025-04-24T06:57:14.320Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T06:57:14.321Z [INFO]: TCP server running on port 55555
+2025-04-24T06:57:14.452Z [INFO]: Server settings updated successfully:
+2025-04-24T07:08:08.468Z [INFO]: Express server running on port 55554
+2025-04-24T07:08:08.588Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T07:08:08.589Z [INFO]: TCP server running on port 55555
+2025-04-24T07:08:08.680Z [INFO]: Server settings updated successfully:
+2025-04-24T07:14:44.072Z [INFO]: Express server running on port 55554
+2025-04-24T07:14:44.205Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T07:14:44.205Z [INFO]: TCP server running on port 55555
+2025-04-24T07:14:44.296Z [INFO]: Server settings updated successfully:
+2025-04-24T07:25:14.403Z [INFO]: Client connected
+2025-04-24T07:27:23.796Z [INFO]: Express server running on port 55554
+2025-04-24T07:27:23.921Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T07:27:23.921Z [INFO]: TCP server running on port 55555
+2025-04-24T07:27:24.021Z [INFO]: Server settings updated successfully:
+2025-04-24T07:27:25.310Z [INFO]: Client connected
+2025-04-24T07:30:46.985Z [INFO]: Express server running on port 55554
+2025-04-24T07:30:47.104Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T07:30:47.104Z [INFO]: TCP server running on port 55555
+2025-04-24T07:30:47.200Z [INFO]: Server settings updated successfully:
+2025-04-24T07:30:47.352Z [INFO]: Client connected
+2025-04-24T07:34:42.680Z [INFO]: Express server running on port 55554
+2025-04-24T07:34:42.820Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T07:34:42.821Z [INFO]: TCP server running on port 55555
+2025-04-24T07:34:42.921Z [INFO]: Server settings updated successfully:
+2025-04-24T07:34:45.308Z [INFO]: Client connected
+2025-04-24T07:49:20.809Z [INFO]: Express server running on port 55554
+2025-04-24T07:49:20.937Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T07:49:20.938Z [INFO]: TCP server running on port 55555
+2025-04-24T07:49:21.082Z [INFO]: Server settings updated successfully:
+2025-04-24T07:49:21.327Z [INFO]: Client connected
+2025-04-24T07:59:18.166Z [INFO]: Express server running on port 55554
+2025-04-24T07:59:18.287Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T07:59:18.288Z [INFO]: TCP server running on port 55555
+2025-04-24T07:59:18.394Z [INFO]: Server settings updated successfully:
+2025-04-24T07:59:20.307Z [INFO]: Client connected
+2025-04-24T08:00:20.423Z [INFO]: Client disconnected64
+2025-04-24T08:01:04.996Z [INFO]: Client connected
+2025-04-24T09:14:25.354Z [INFO]: Client disconnected64
+2025-04-24T09:15:08.024Z [INFO]: Client connected
+2025-04-24T09:20:32.256Z [INFO]: Express server running on port 55554
+2025-04-24T09:20:32.375Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:20:32.377Z [INFO]: TCP server running on port 55555
+2025-04-24T09:20:32.493Z [INFO]: Server settings updated successfully:
+2025-04-24T09:20:33.297Z [INFO]: Client connected
+2025-04-24T09:21:46.306Z [INFO]: Express server running on port 55554
+2025-04-24T09:21:46.437Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:21:46.439Z [INFO]: TCP server running on port 55555
+2025-04-24T09:21:46.557Z [INFO]: Server settings updated successfully:
+2025-04-24T09:21:49.142Z [INFO]: Client connected
+2025-04-24T09:23:03.871Z [INFO]: Express server running on port 55554
+2025-04-24T09:23:03.985Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:23:03.986Z [INFO]: TCP server running on port 55555
+2025-04-24T09:23:04.082Z [INFO]: Server settings updated successfully:
+2025-04-24T09:23:04.146Z [INFO]: Client connected
+2025-04-24T09:23:48.534Z [INFO]: Client disconnected64
+2025-04-24T09:24:03.348Z [INFO]: Client connected
+2025-04-24T09:24:40.570Z [INFO]: Express server running on port 55554
+2025-04-24T09:24:40.683Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:24:40.684Z [INFO]: TCP server running on port 55555
+2025-04-24T09:24:40.808Z [INFO]: Server settings updated successfully:
+2025-04-24T09:24:43.596Z [INFO]: Client connected
+2025-04-24T09:39:55.193Z [INFO]: Client disconnected64
+2025-04-24T09:40:07.456Z [INFO]: Client connected
+2025-04-24T09:44:12.282Z [INFO]: Successfully cleared all processed events
+2025-04-24T09:44:12.319Z [INFO]: Successfully cleared all processed events
+2025-04-24T09:44:12.336Z [INFO]: Server settings updated successfully:
+2025-04-24T09:44:12.976Z [INFO]: Express server running on port 55554
+2025-04-24T09:44:13.126Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:44:13.127Z [INFO]: TCP server running on port 55555
+2025-04-24T09:44:13.211Z [INFO]: Server settings updated successfully:
+2025-04-24T09:44:13.278Z [INFO]: Client connected
+2025-04-24T09:44:27.881Z [INFO]: Successfully cleared all processed events
+2025-04-24T09:44:27.896Z [INFO]: Server settings updated successfully:
+2025-04-24T09:44:27.921Z [INFO]: Successfully cleared all processed events
+2025-04-24T09:44:41.522Z [INFO]: Express server running on port 55554
+2025-04-24T09:44:41.643Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:44:41.644Z [INFO]: TCP server running on port 55555
+2025-04-24T09:44:41.736Z [INFO]: Server settings updated successfully:
+2025-04-24T09:44:42.766Z [INFO]: Client connected
+2025-04-24T09:52:14.187Z [INFO]: Express server running on port 55554
+2025-04-24T09:52:14.305Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:52:14.305Z [INFO]: TCP server running on port 55555
+2025-04-24T09:52:14.387Z [INFO]: Server settings updated successfully:
+2025-04-24T09:52:14.798Z [INFO]: Client connected
+2025-04-24T09:52:35.425Z [INFO]: Successfully cleared all processed events
+2025-04-24T09:52:35.465Z [INFO]: Successfully cleared all processed events
+2025-04-24T09:52:35.490Z [INFO]: Server settings updated successfully:
+2025-04-24T09:52:36.132Z [INFO]: Express server running on port 55554
+2025-04-24T09:52:36.234Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:52:36.234Z [INFO]: TCP server running on port 55555
+2025-04-24T09:52:36.384Z [INFO]: Server settings updated successfully:
+2025-04-24T09:52:37.781Z [INFO]: Client connected
+2025-04-24T09:52:58.855Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:53:06.559Z [INFO]: Server settings updated successfully:
+2025-04-24T09:53:16.353Z [INFO]: Successfully cleared all processed events
+2025-04-24T09:53:16.370Z [INFO]: Server settings updated successfully:
+2025-04-24T09:53:16.379Z [INFO]: Successfully cleared all processed events
+2025-04-24T09:53:16.405Z [INFO]: Server settings updated successfully:
+2025-04-24T09:53:30.352Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:53:40.736Z [ERROR]: Error updating server settings: Got timeout reading communication packets
+2025-04-24T09:54:18.516Z [INFO]: Express server running on port 55554
+2025-04-24T09:54:18.629Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:54:18.630Z [INFO]: TCP server running on port 55555
+2025-04-24T09:54:18.743Z [INFO]: Server settings updated successfully:
+2025-04-24T09:54:18.798Z [INFO]: Client connected
+2025-04-24T09:55:39.244Z [INFO]: Client disconnected64
+2025-04-24T09:55:44.034Z [INFO]: Client connected
+2025-04-24T09:55:47.290Z [INFO]: Client disconnected64
+2025-04-24T09:59:59.281Z [INFO]: Express server running on port 55554
+2025-04-24T09:59:59.387Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T09:59:59.388Z [INFO]: TCP server running on port 55555
+2025-04-24T09:59:59.501Z [INFO]: Server settings updated successfully:
+2025-04-24T10:00:03.541Z [INFO]: Client connected
+2025-04-24T10:04:31.669Z [INFO]: Express server running on port 55554
+2025-04-24T10:04:31.803Z [INFO]: Web Socket server listening on port 55566
+2025-04-24T10:04:31.804Z [INFO]: TCP server running on port 55555
+2025-04-24T10:04:31.897Z [INFO]: Server settings updated successfully:
+2025-04-24T10:04:33.543Z [INFO]: Client connected
+2025-04-24T10:04:42.284Z [INFO]: Client disconnectedundefined
+2025-04-24T10:04:45.843Z [INFO]: Client connected
+2025-04-24T10:05:36.205Z [INFO]: Client disconnected64
+2025-04-24T10:05:36.208Z [INFO]: Client connected
+2025-04-24T10:05:40.998Z [INFO]: Client disconnected64
+2025-04-24T10:05:41.000Z [INFO]: Client connected
+2025-04-24T10:05:42.366Z [INFO]: Client disconnected64
+2025-04-24T10:05:42.368Z [INFO]: Client connected
+2025-04-24T10:06:49.912Z [INFO]: Client disconnected64

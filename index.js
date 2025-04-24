@@ -21,6 +21,9 @@ const processedImage = new NodeCache({ stdTTL: 600 });
 const connectedTcpClients = [];
 const imageProcessingQueue = [];
 const apiapp= express();
+const cors = require('cors');
+apiapp.use(cors());
+apiapp.use(express.json());
 const eventLocks = new Set();
 const port = config.endpointport; 
 const logger = createLogger({
@@ -90,6 +93,20 @@ apiapp.get('/connectedusers', async (req, res) => {
     }
 });
 
+apiapp.post('/disconnect/:userId', (req, res) => {
+    const userId = req.params.userId;
+
+    if (connectedUsers.has(userId)) {
+        connectedUsers.delete(userId);
+        console.log(`Disconnected user ${userId}`); 
+        stopDataSending(userId);
+        UpdateOnlineUser(userId,'Forcefully Disconnected');
+        res.json({ success: true, message: `User ${userId} disconnected` });
+    } else {
+        res.status(404).json({ success: false, message: `User ${userId} not found` });
+    }
+});
+
 
 async function connectedusers() {
     // Get user details directly from the connectedUsers map without querying the database
@@ -128,11 +145,36 @@ apiapp.post('/updateactiveevents', async (req, res) => {
 
 
 // Start the Express server
-const server = apiapp.listen(port, () => {
+apiapp.listen(port, () => {
     logger.info(`Express server running on port ${port}`);
 });
 
 app.setName('svmnotificationserver');
+
+
+let usersWindow = null;
+
+function openUsersWindow() {
+  if (usersWindow) {
+    usersWindow.focus();
+    return;
+  }
+  
+  usersWindow = new BrowserWindow({
+    width: 600,
+    height: 400,
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+    }
+  });
+
+  usersWindow.loadFile(path.join(__dirname, 'table.html')); // Adjust path if needed
+
+  usersWindow.on('closed', () => {
+    usersWindow = null;
+  });
+}
 
 app.on('ready', async () => {
     createWindow();
@@ -184,19 +226,10 @@ function createWindow() {
     tray = new Tray(path.join(__dirname, './noticonnect.ico'));
     const contextMenu = Menu.buildFromTemplate([
        
-        { label: 'Connected Users', click: async () => {
-            const users = await connectedusers();
-            const usersString = JSON.stringify(users, null, 2);
-            // Show a dialog with the return value of connectedUsers function
-            dialog.showMessageBox({
-                type: 'info',
-                title: 'Connected Users',
-                message: usersString,
-            });
-        }},
-        // { type: 'separator' },
-        // { label: 'Users List',click: () => createMainWindow() },
+        { label: 'Connected Users', click: () => openUsersWindow() },,
         { type: 'separator' },
+        // { label: 'Users List',click: () => createMainWindow() },
+        // { type: 'separator' },
         { label: 'Restart',click: () => restartApplication() },
         { type: 'separator' },
         { label: 'Quit', click: () => quitApplication() }
